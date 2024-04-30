@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Windows Update</title>
+  <link rel="icon" type="image/png" href="win10.png" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta charset="UTF-8">
+  <meta name="description" content="Fake Windows 10 Update screen">
+  <meta name="keywords"
+    content="prank, fake windows, fake windows 10, fake windows update, prank windows update, windows 10 update animation, segoe boot semilight, windows 10, boot, startup, blue screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: boot;
+      src: url(boot.ttf);
+    }
+
+    @font-face {
+      font-family: segoe;
+      src: url(segoe.ttf);
+    }
+
+    :root {
+      touch-action: pan-x pan-y;
+      height: 100%;
+    }
+
+    html {
+      font-size: 16px;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    div#windows {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      white-space: pre-wrap;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      background: rgb(1, 100, 182);
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+
+      user-select: none;
+
+      /*background-image: url('reference.png');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;*/
+    }
+
+    div#upper-container {
+      position: relative;
+      top: 36%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      top: 45%;
+    }
+
+    div#lower-container {
+      height: 10%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      display: none;
+    }
+
+    span#spinner {
+      margin-bottom: 1.15vh;
+      font-family: 'boot';
+      font-size: 4.5vh;
+      -webkit-text-stroke: 2px #0164b6;
+    }
+
+    div.ui {
+      font-family: 'segoe';
+      line-height: 2.7vh;
+      font-size: 2.0875vh;
+    }
+
+    div#hide-screen {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+
+    button {
+      border: solid 3px #ffffff;
+      color: #ffffff;
+      font-family: 'segoe';
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 3px 23px;
+      margin: 10px;
+      background: #2067b2;
+    }
+
+    button.exit {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 12px;
+    }
+
+    button:hover {
+      background: #4da7dd;
+    }
+
+    div#rick-container,
+    video#rick {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      cursor: auto;
+      background: #000000;
+    }
+
+    div#rick-container.show,
+    div#rick-container.show video#rick {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+
+    #search {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      touch-action: none;
+      pointer-events: none;
+      z-index: -100;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="search">
+    Fake Windows 10 Updating Blue Screen Prank. The website is built using real Windows 10 fonts and loader with the
+    same layout, colors, and animation.
+  </div>
+  <div id="windows">
+    <div id="upper-container">
+      <span id="spinner"></span>
+      <div class="ui" id="main-text">Configuring Windows updates<br>text2</div>
+    </div>
+    <div id="lower-container">
+      <div class="ui" id="lower-text"></div>
+    </div>
+    <div id="hide-screen"></div>
+  </div>
+  <div id="rick-container">
+    <video id="rick" loop disableremoteplayback></video>
+    <button id="rick-exit" class="exit">X</button>
+  </div>
+  <script>
+    Math.randomRange = function (min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    String.format = function (string) {
+      [...arguments].slice(1).forEach((e, i) => {string = string.replaceAll(`{${i}}`, e);});
+      return string;
+    }
+
+    function animation(frames, delay, callback) {
+      let index = 0;
+      function next() {
+        callback(index);
+        index++;
+        if (index === frames) {
+          index = 0;
+        }
+        setTimeout(next, delay);
+      }
+      next();
+    };
+    let spinner = document.querySelector('#spinner');
+    animation(121, 34.5, function (index) {
+      spinner.innerText = String.fromCharCode(index + 57426);
+    });
+
+    let rickContainer = document.querySelector('#rick-container');
+    let rick = document.querySelector('#rick');
+    rick.addEventListener('click', function () {
+      if (rick.paused) {
+        rick.play();
+      } else {
+        rick.pause();
+      }
+    });
+
+    const messages = {
+      restartText: "Your PC will restart several times",
+      configurePrepare: "Preparing to configure Windows\nDon't turn off your computer",
+      workingUpdate: "Working on updates {0}% complete.\nDon't turn off your PC. This will take a while.",
+      restarting: "Restarting",
+      configuringUpdate: "Configuring Windows updates\n{0}% complete\nDon't turn off your computer",
+      gettingReady: "Getting Windows ready\nDon't turn off your computer",
+      finish: "Windows has finished updating.\n<button id=\"continue-to-windows\">Continue to Windows</button>"
+    };
+
+    window.skipThisStage = false;
+    function progress(onProgress, speedMultiplier = 1, beforeTime = 0, afterTime = 0, incrementRange = [1, 10], intervalRange = [200, 1000], callback) {
+      let currentProgress = 0;
+
+      function updateProgressBar() {
+        if (currentProgress >= 100 || window.skipThisStage) {
+          setTimeout(callback, afterTime);
+          window.skipThisStage = false;
+        } else {
+          const increment = Math.randomRange.apply(null, incrementRange);
+          currentProgress = Math.min(currentProgress + increment, 100);
+          onProgress(currentProgress);
+          setTimeout(updateProgressBar, Math.randomRange.apply(null, intervalRange) / speedMultiplier);
+        }
+      }
+      onProgress(currentProgress);
+      setTimeout(updateProgressBar, beforeTime);
+    }
+    let rickExit = document.querySelector('#rick-exit');
+    rickExit.addEventListener('click', function () {
+      if (rickContainer.classList.contains('show')) {
+        rickContainer.classList.remove('show');
+        if (!rick.paused) {
+          rick.pause();
+        }
+      }
+    });
+    function continueToWindows() {
+      /*let rick = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+      try {
+        history.replaceState(null, document.title, rick);
+      } catch {
+        window.location.href = rick;
+      }*/
+
+      rickContainer.classList.add('show');
+      rick.currentTime = 0;
+      rick.play();
+    }
+
+    function initFakeUpdater() {
+      document.body.style.cursor = 'none';
+
+      spinner.style.opacity = '1';
+      let mainText = document.querySelector('#main-text');
+      let lowerText = document.querySelector('#lower-text');
+      let hideScreen = document.querySelector('#hide-screen');
+      mainText.style.display = 'block';
+      lowerText.style.display = 'block';
+      lowerText.innerText = messages.restartText;
+      hideScreen.style.display = 'none';
+      progress(function (p) {
+        mainText.innerText = 'Shutting Down';
+      }, 1, 0, 0, [100, 100], [4000, 4000], function () {
+        progress(function (p) {
+          mainText.innerText = '.';
+        }, 1, 0, 0, [100, 100], [850, 850], function () {
+          progress(function (p) {
+            mainText.innerText = '..';
+          }, 1, 0, 0, [100, 100], [850, 850], function () {
+            progress(function (p) {
+              mainText.innerText = '...';
+            }, 1, 0, 0, [100, 100], [850, 850], function () {
+              progress(function (p) {
+                mainText.innerText = 'I\'m just kidding.';
+              }, 1, 0, 0, [100, 100], [1500, 1500], function () {
+                progress(function (p) {
+                  mainText.innerText = 'You can go back to playing your game.';
+                }, 1, 0, 0, [100, 100], [2000, 2000], function () {console.log('finish')});
+              });
+            });
+          });
+        });
+      });
+    }
+
+    initFakeUpdater();
+  </script>
+</body>
+
+</html>

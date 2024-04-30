@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" media="all" type="text/css" href="schoology/schoology.css">
+</head>
+
+<body>
+  <div id="main-content">
+    <img id="main-background" />
+    <div id="main-header">
+      <div id="main-header-text"></div>
+    </div>
+    <div id="main-header-clickarea"></div>
+    <div id="overlay-body">
+      <div id="character-parent"></div>
+    </div>
+    <div id="main-body">
+      <div id="choices-menu"></div>
+      <div id="transition"></div>
+      <div id="loader-screen">
+        <div id="loader-screen-txt"></div>
+      </div>
+    </div>
+    <div id="games-body">
+      <div class="game-container" id="game-fixearth">
+        <div id="game-fixearth-background"></div>
+        <div class="game-header">
+          <div class="game-header-title">Fix the Earth's Rotation!</div>
+          <button class="btn btn-success ms-auto" onclick="e_game_fixEarth_check();">Check</button>
+        </div>
+        <div class="game-body pb-5">
+          <img id="game-fixearth-rotation-img" src="game/fixearth/earth.png" />
+          <div id="game-fixearth-rotation-txt">0.0°</div>
+        </div>
+        <input type="range" class="form-range" id="game-fixearth-rotation" min="0" max="30" value="0" step="0.1">
+      </div>
+      <div class="game-container" id="game-rotatemoon">
+        <div id="game-fixearth-background"></div>
+        <div class="game-header">
+          <div class="game-header-title">Make a <span id="game-rotatemoon-txt"></span>!</div>
+          <button class="btn btn-success ms-auto" onclick="e_game_rotateMoon_check();">Check</button>
+        </div>
+        <div class="game-body pb-5">
+          <div id="game-rotatemoon-rotation-path"></div>
+          <img id="game-rotatemoon-rotation-img3" class="blur" src="game/rotatemoon/sun.png" />
+          <img id="game-rotatemoon-rotation-img3" src="game/rotatemoon/sun.png" />
+          <div id="game-rotatemoon-rotation-parent">
+            <img id="game-rotatemoon-rotation-img2" src="game/rotatemoon/earth.png" />
+            <img id="game-rotatemoon-rotation-img" src="game/rotatemoon/moon/002.png" />
+          </div>
+        </div>
+        <input type="range" class="form-range" id="game-rotatemoon-rotation" min="0" max="7" value="0" step="1">
+      </div>
+      <div class="game-container" id="game-maketide">
+        <div id="game-fixearth-background"></div>
+        <div class="game-header">
+          <div class="game-header-title">Make a <span id="game-maketide-txt"></span>!</div>
+          <button class="btn btn-success ms-auto" onclick="e_game_makeTide_check();">Check</button>
+        </div>
+        <div class="game-body pb-5">
+          <div id="game-maketide-tidecircle"></div>
+          <div id="game-maketide-rotation-path"></div>
+          <img id="game-maketide-rotation-img3" class="blur" src="game/rotatemoon/sun.png" />
+          <img id="game-maketide-rotation-img3" src="game/rotatemoon/sun.png" />
+          <div id="game-maketide-rotation-parent">
+            <img id="game-maketide-rotation-img2" src="game/rotatemoon/earth.png" />
+            <img id="game-maketide-rotation-img" src="game/rotatemoon/moon/002.png" />
+          </div>
+        </div>
+        <input type="range" class="form-range" id="game-maketide-rotation" min="0" max="3" value="0" step="1">
+      </div>
+    </div>
+    <div id="window-schoology">
+      <div id="body">
+        <img class="notschoology" src="schoology/notschoology.jpg">
+        <div id="wrapper" class="site-navigation-resize">
+          <div id="container" class="with-tabs clearfix">
+            <div id="main-content-wrapper" class="clearfix ">
+              <div id="center-wrapper" class="">
+                <div id="center-inner" class="clearfix">
+                  <div id="content-wrapper">
+                    <div id="center">
+                      <div id="main">
+                        <div id="main-inner">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="vmodal-main" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="vmodal-title" class="modal-title"></h5>
+          </div>
+          <div id="vmodal-body" class="modal-body"></div>
+          <div class="modal-footer">
+            <button id="vmodal-save" type="button" class="btn btn-primary"></button>
+            <button id="vmodal-cancel" type="button" class="btn btn-secondary"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="credits-scroller">
+      <span class="credit-title">Producer</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Director</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Project Manager</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Quality Assurance</span>
+      <span class="credit-elements">Chuyan Liu<br>Shariq Jamal<br>Jake Lu<br>Kae Ni</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Game Designer</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Programmer</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Artist</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Writer</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Animator</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Progression Designer</span>
+      <span class="credit-elements">Chuyan Liu</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Main Art Sources</span>
+      <span class="credit-elements"><strong>Characters:</strong>
+        <a href="https://commons.wikimedia.org/wiki/File:Pluto-transparent.png">Pluto Sprite</a>
+        <a href="https://commons.wikimedia.org/wiki/File:ChatGPT_logo.svg">ChatGPT Sprite</a>
+        <strong>Backgrounds:</strong>
+        <a
+          href="https://www.freepik.com/free-photo/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration_20850610.htm">Spaceship</a>
+        <a href="https://svs.gsfc.nasa.gov/4851/">In Space</a>
+        <a href="https://www.timeanddate.com/astronomy/axial-tilt-obliquity.html">Tilted Earth Diagram</a>
+        <a href="https://www.timeanddate.com/astronomy/seasons-causes.html">Tilted Earth Diagram w/ Sun</a>
+        <a href="https://www.timeanddate.com/astronomy/moon/phases.html">Moon Phases (Circle)</a>
+        <a href="https://www.timeanddate.com/geography/southern-northern-hemisphere.html">Moon Phases (List)</a>
+        <a href="https://www.timeanddate.com/astronomy/moon/tides.html">Tide Graphics</a></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-title">Minigame Art Sources</span>
+      <span class="credit-elements"><strong>Fix Earth Rotation:</strong>
+        <a href="https://www.pinclipart.com/maxpin/bxJhRi/">Earth Sprite</a>
+        <a href="https://www.rawpixel.com/image/5924106/photo-image-public-domain-stars-galaxy">Background</a>
+        <strong>Create Moon Phases:</strong>
+        <a href="https://www.flaticon.com/free-icon/worldwide_814513">Earth Sprite</a>
+        <a href="https://www.timeanddate.com/geography/southern-northern-hemisphere.html">Big Moon Sprite</a>
+        <a href="https://www.timeanddate.com/astronomy/moon/phases.html">Mini Moon Sprites</a>
+        <a href="https://www.rawpixel.com/image/5924106/photo-image-public-domain-stars-galaxy">Background</a></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-elements">Made with over 1900 lines of JavaScript, making it the longest
+        single program I have coded.</span>
+      <span class="credit-spacer"></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-spacer"></span>
+      <span class="credit-elements">Thanks for Playing!</span>
+    </div>
+    <div id="main-menustart">
+      <div id="main-menustart-background"></div>
+      <div id="main-menustart-header">
+        <div id="main-menustart-header-text-container">
+          <div id="main-menustart-header-text">Chuyan's Science 8th Final Project</div>
+          <div id="main-menustart-header-subtext">VISUAL-NOVEL-SYLE TEKS PRESENTATION</div>
+          <div id="main-menustart-header-prenote">Please enter FULLSCREEN to play this game! Just like any other Visual
+            Novel game, you need to click to progress the story. Clicking while a character is speaking will instantly
+            finish their dialog. Don't click too fast, it will glitch and merge the dialogs!!</div>
+        </div>
+        <button class="btn btn-primary" onclick="mainVisualNovelStart();">Start Game</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  <script src="schoology/schoology-renderer.js"></script>
+</body>
+
+</html>

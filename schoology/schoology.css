@@ -1,0 +1,1567 @@
+#window-schoology * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  word-wrap: break-word
+}
+
+#window-schoology img {
+  border: none
+}
+
+#window-schoology html {
+  overflow: auto
+}
+
+#window-schoology {
+  background: var(--sgy-background-color-default);
+  color: #333;
+  font: 12px var(--sgy-font-default);
+  text-wrap: normal
+}
+
+#window-schoology p {
+  font-size: 12px;
+  line-height: 1.4
+}
+
+#window-schoology a {
+  outline: 0;
+  color: #4479b3;
+  font-weight: 700;
+  text-decoration: none
+}
+
+#window-schoology a:hover {
+  text-decoration: underline
+}
+
+#window-schoology [role=button]:focus,
+#window-schoology [role=menuitem]:focus,
+#window-schoology [role=tab]:focus,
+#window-schoology a:focus,
+#window-schoology input[type=button]:focus,
+#window-schoology input[type=checkbox]:focus,
+#window-schoology input[type=file]:focus,
+#window-schoology input[type=radio]:focus,
+#window-schoology input[type=reset]:focus,
+#window-schoology input[type=search]:focus,
+#window-schoology input[type=submit]:focus,
+#window-schoology input[type=text]:focus,
+#window-schoology select:focus {
+  outline: thin dotted #888;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px
+}
+
+#window-schoology [role=button]:active,
+#window-schoology [role=button]:hover,
+#window-schoology [role=menuitem]:active,
+#window-schoology [role=menuitem]:hover,
+#window-schoology [role=tab]:active,
+#window-schoology [role=tab]:hover,
+#window-schoology a:active,
+#window-schoology a:hover {
+  outline: 0
+}
+
+#window-schoology img[alt] {
+  font-size: 0
+}
+
+#window-schoology .pre-fill-title {
+  color: #9a9fa8
+}
+
+#window-schoology .pre-fill {
+  color: #9a9fa8 !important
+}
+
+#window-schoology pre {
+  background: #f2f2f2;
+  color: #454545;
+  padding: 5px 10px;
+  white-space: pre
+}
+
+#window-schoology .hidden {
+  display: none
+}
+
+#window-schoology .s-content-title {
+  font-weight: 700
+}
+
+#window-schoology .s-content-description {
+  color: #9a9fa8
+}
+
+#window-schoology .s-nbsp {
+  white-space: nowrap
+}
+
+#window-schoology .hide-label label {
+  position: absolute;
+  inset-inline-start: -9999px;
+  top: auto;
+  width: 10px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-break: normal;
+  display: block
+}
+
+#window-schoology #body {
+  position: relative;
+  z-index: 1
+}
+
+#window-schoology .form-select[disabled=disabled],
+#window-schoology .form-text[disabled=disabled],
+select[disabled=disabled] {
+  background: #eee
+}
+
+#window-schoology #main {
+  padding: 0 0 40px;
+  float: left;
+  width: 100%
+}
+
+#window-schoology [dir=rtl] #main {
+  float: right
+}
+
+#window-schoology .site-navigation-resize {
+  min-height: calc(100vh - 120px)
+}
+
+@media (max-width:768px) {
+  #window-schoology .site-navigation-resize {
+    min-height: calc(100vh - 190px)
+  }
+}
+
+#window-schoology #container {
+  margin: 0 0 40px;
+  padding: 0 20px
+}
+
+#window-schoology #center-wrapper {
+  position: relative
+}
+
+#window-schoology #content-wrapper {
+  padding-bottom: 40px
+}
+
+#window-schoology #main-content-wrapper {
+  margin-inline-start: 180px;
+  border: 1px solid #c7c7c7;
+  /* border-top: none; */
+  padding: 0 20px;
+  background: #fff;
+  min-height: 500px
+}
+
+#window-schoology .s-hide-left-nav #main-content-wrapper {
+  margin: 0;
+  padding-bottom: 40px
+}
+
+#window-schoology .s-center-main-content #main-content-wrapper {
+  margin-inline-start: 90px;
+  margin-inline-end: 90px
+}
+
+#window-schoology .vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+  height: 46px
+}
+
+#window-schoology #nav {
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100
+}
+
+#window-schoology #left-nav {
+  width: 181px;
+  margin: 0;
+  position: relative
+}
+
+#window-schoology #content-left {
+  width: 170px;
+  margin: 15px 0
+}
+
+#window-schoology .sidebar {
+  width: 170px
+}
+
+#window-schoology #sidebar-left {
+  float: left;
+  width: 180px;
+  margin: 0 -1px 0;
+  margin-inline-start: 0;
+  padding-top: 15px
+}
+
+#window-schoology [dir=rtl] #sidebar-left {
+  float: right
+}
+
+#window-schoology body.s-hide-left-nav #sidebar-left {
+  display: none
+}
+
+#window-schoology .action-edit a,
+#window-schoology .action-edit span,
+#window-schoology .action-edit-link a,
+#window-schoology .action-link-edit a {
+  background-position: 9px -36px
+}
+
+#window-schoology [dir=rtl] .action-edit a,
+#window-schoology [dir=rtl] .action-edit span,
+#window-schoology [dir=rtl] .action-edit-link a,
+#window-schoology [dir=rtl] .action-link-edit a {
+  background-position-x: calc(100% - 9px)
+}
+
+#window-schoology .action-message span {
+  background-image: url(/sites/all/themes/schoology_theme/images/mail_icon.png?662824fd62806ae6);
+  background-position: 13px 5px
+}
+
+#window-schoology [dir=rtl] .action-message span {
+  background-position-x: calc(100% - 13px)
+}
+
+#window-schoology .action-edit a:hover,
+#window-schoology .action-edit span:hover,
+#window-schoology .action-edit-link a:hover,
+#window-schoology .action-link-edit a:hover {
+  background-position: 9px -55px
+}
+
+#window-schoology [dir=rtl] .action-edit a:hover,
+#window-schoology [dir=rtl] .action-edit span:hover,
+#window-schoology [dir=rtl] .action-edit-link a:hover,
+#window-schoology [dir=rtl] .action-link-edit a:hover {
+  background-position-x: calc(100% - 9px)
+}
+
+#window-schoology .action-message a {
+  background: url(/sites/all/themes/schoology_theme/images/mail_icon.png?662824fd62806ae6) no-repeat 13px 4px
+}
+
+#window-schoology .action-show a {
+  background: url(/sites/all/themes/schoology_theme/images/icons-sprite-tools.png?662824fd62806ae6) no-repeat 12px -204px
+}
+
+#window-schoology .action-hide a {
+  background: url(/sites/all/themes/schoology_theme/images/icons-sprite-tools.png?662824fd62806ae6) no-repeat 12px -224px
+}
+
+#window-schoology [dir=rtl] .action-hide a {
+  background-position-x: calc(100% - 12px) !important
+}
+
+#window-schoology .action-import a {
+  background: url(/sites/all/themes/schoology_theme/images/icons-sprite-tools.png?662824fd62806ae6) no-repeat 12px -142px
+}
+
+#window-schoology a.next span,
+#window-schoology span.next span {
+  display: block;
+  float: right;
+  height: 20px;
+  width: 20px;
+  margin-inline-end: 10px;
+  text-decoration: none;
+  outline: 0;
+  background: url(/sites/all/themes/schoology_theme/images/btn-sprite.png?662824fd62806ae6) no-repeat;
+  border: none;
+  cursor: pointer
+}
+
+#window-schoology [dir=rtl] a.next span,
+#window-schoology [dir=rtl] span.next span {
+  float: left
+}
+
+#window-schoology a.next span,
+#window-schoology span.next span {
+  background-position: 2px -678px
+}
+
+#window-schoology [dir=rtl] a.next span,
+#window-schoology [dir=rtl] span.next span {
+  background-position: 2px -658px
+}
+
+#window-schoology a.next,
+#window-schoology span.next {
+  background: url(assets/gray-btn-bg.gif) repeat-x 0 1px;
+  float: right;
+  height: 20px;
+  width: 35px;
+  border: 1px solid;
+  border-color: #999 #999 #888;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1)
+}
+
+#window-schoology [dir=rtl] a.next,
+#window-schoology [dir=rtl] span.next {
+  float: left
+}
+
+#window-schoology a.next:active,
+#window-schoology span.next:active {
+  background: #ddd
+}
+
+#window-schoology #tabs-wrapper {
+  margin: 0;
+  height: 40px
+}
+
+#window-schoology a.user:hover,
+#window-schoology a.user:hover span.name-wrapper span {
+  text-decoration: none;
+  color: #577aa8
+}
+
+#window-schoology .schoology {
+  background: #f5f5f5;
+  padding: 7px 5px;
+  margin: -7px 0 -7px;
+  margin-inline-start: -7px;
+  border-top: 1px solid #888;
+  width: 300px;
+  color: #333;
+  height: 40px;
+  text-align: center
+}
+
+#window-schoology .schoology .autocomplete-inner {
+  padding-inline-start: 40px;
+  text-align: start
+}
+
+#window-schoology .schoology:hover {
+  background: #3875d7;
+  border-color: #222;
+  color: #fff
+}
+
+#window-schoology .user {
+  float: left
+}
+
+#window-schoology [dir=rtl] .user {
+  float: right
+}
+
+#window-schoology .user span.name-wrapper {
+  white-space: nowrap;
+  color: #9a9fa8;
+  background-color: #f0f0f0;
+  padding: 4px 0 4px;
+  padding-inline-start: 5px;
+  margin: 0 4px 4px;
+  margin-inline-start: 0;
+  display: block
+}
+
+#window-schoology .user span span {
+  cursor: pointer;
+  padding: 1px 5px;
+  color: #ccc;
+  font-family: var(--sgy-font-default);
+  font-size: 10px
+}
+
+#window-schoology .user span span:hover {
+  text-decoration: none;
+  color: #777
+}
+
+#window-schoology .name-wrapper span {
+  color: #9eb5ce;
+  font-weight: 700
+}
+
+#window-schoology .name-wrapper {
+  color: #333;
+  font-weight: 400
+}
+
+#window-schoology label {
+  font-weight: 700
+}
+
+#window-schoology label.option {
+  font-weight: 400
+}
+
+#window-schoology .form-item {
+  margin-bottom: 5px
+}
+
+#window-schoology body input[type=password],
+#window-schoology body input[type=text],
+#window-schoology body input[type=textbox],
+#window-schoology body input[type=time] {
+  color: #333;
+  border: 1px solid #c7c7c7;
+  font: 13px var(--sgy-font-default);
+  padding: 5px;
+  outline: 0
+}
+
+#window-schoology body input[type=checkbox] {
+  border: none;
+  padding: 0
+}
+
+#window-schoology body input[type=file] {
+  padding: 0
+}
+
+#window-schoology select {
+  color: #333;
+  border: 1px solid #c7c7c7;
+  font: 13px var(--sgy-font-default);
+  padding: 5px;
+  height: 32px
+}
+
+#window-schoology body select {
+  overflow: hidden;
+  height: 28px;
+  padding: 4px
+}
+
+#window-schoology input[type=button],
+#window-schoology input[type=submit] {
+  margin: 0;
+  cursor: pointer;
+  background: 0 0;
+  font-family: var(--sgy-font-default);
+  font-size: 14px;
+  outline: 0;
+  padding: 5px 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  border: none;
+  color: #fff;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: top;
+  overflow: visible;
+  height: 27px
+}
+
+#window-schoology input[type=button].hidden,
+#window-schoology input[type=submit].hidden {
+  display: none
+}
+
+#window-schoology .submit-span-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  border: 1px solid #023d5a;
+  background: #337dbc url(assets/btn-bg-dark.gif) repeat-x;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1)
+}
+
+#window-schoology .s-link-wrapper .submit-span-wrapper {
+  border: 0 none;
+  background: 0 0;
+  color: #327cbb;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+#window-schoology .s-link-wrapper input[type=button],
+#window-schoology .s-link-wrapper input[type=submit] {
+  color: #327cbb;
+  padding: 0;
+  vertical-align: baseline;
+  font-size: 12px
+}
+
+#window-schoology .submit-span-wrapper input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+:focus,
+#window-schoology html.js input.form-autocomplete {
+  outline: 0
+}
+
+#window-schoology .form-item label.option input {
+  border: none
+}
+
+#window-schoology .description {
+  font-size: 12px;
+  color: #677583
+}
+
+#window-schoology input#edit-string {
+  width: 166px
+}
+
+#window-schoology body option {
+  padding: 5px 10px
+}
+
+#window-schoology table {
+  border-spacing: 0;
+  border-collapse: collapse
+}
+
+#window-schoology span.submit-span-wrapper:active {
+  background-image: none
+}
+
+#window-schoology div.status {
+  border-color: #9dd684;
+  color: #333;
+  background: #e3ffd8
+}
+
+#window-schoology div.error,
+#window-schoology tr.error {
+  background-color: #fcc;
+  color: #a30000;
+  border: 1px solid #d77
+}
+
+#window-schoology .form-item input.error,
+#window-schoology .form-item select.error {
+  border-color: #d77;
+  color: #363636;
+  background-color: #fef3f3
+}
+
+#window-schoology .message-text {
+  text-align: start;
+  line-height: 1.4
+}
+
+#window-schoology div[id^=edit-addl-realms-course-] {
+  margin-bottom: 5px
+}
+
+#window-schoology #progress .bar {
+  background: #ccc;
+  border: 1px solid #888;
+  margin-inline-start: 0
+}
+
+#window-schoology #progress {
+  background: url(/sites/all/themes/schoology_theme/images/ajax-loader.gif?662824fd62806ae6) no-repeat right 32px
+}
+
+#window-schoology [dir=rtl] #progress {
+  background-position-x: left
+}
+
+#window-schoology #progress .message {
+  margin: 5px 0 0;
+  margin-inline-start: 1px;
+  font-size: 12px;
+  width: 700px
+}
+
+#window-schoology .clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0
+}
+
+* html .clearfix {
+  height: 1%
+}
+
+#window-schoology .popups-title {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 5px 10px;
+  color: #fff;
+  background: #444;
+  border: 1px solid #222;
+  border-bottom: none
+}
+
+#window-schoology .popups-title a {
+  color: #fff
+}
+
+#window-schoology .popups-body {
+  font-family: var(--sgy-font-default);
+  font-size: 13px;
+  padding: 0 0 40px;
+  background: #fff;
+  border: 1px solid #333
+}
+
+#window-schoology .popups-body p {
+  margin: 10px 0;
+  font-size: 12px
+}
+
+#window-schoology .popups-large {
+  width: 600px
+}
+
+#window-schoology .popups-large form {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden
+}
+
+#window-schoology .popups-300 {
+  width: 300px
+}
+
+#window-schoology #bottom-bar {
+  bottom: -1px;
+  inset-inline-start: 15px;
+  position: fixed;
+  z-index: 1000
+}
+
+#window-schoology #nav_left {
+  float: left
+}
+
+#window-schoology [dir=rtl] #nav_left {
+  float: right
+}
+
+#window-schoology .message-wrapper {
+  width: 410px;
+  border: 1px solid #000;
+  border-width: 0 1px 2px;
+  min-height: 42px;
+  position: absolute;
+  background: #fff;
+  inset-inline-end: -1px;
+  padding: 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .2)
+}
+
+#window-schoology .message-wrapper.hide {
+  display: none
+}
+
+#window-schoology .grade-post {
+  background: url(/sites/all/themes/schoology_theme/images/icons_sprite.png?662824fd62806ae6) no-repeat 0 -43px
+}
+
+#window-schoology #autocomplete {
+  position: absolute;
+  background: #fff;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  z-index: 10000
+}
+
+#window-schoology #autocomplete em {
+  font-style: normal
+}
+
+#window-schoology .s-rte table.s_table td {
+  padding: 5px 6px;
+  height: 16px;
+  border: 0 none;
+  width: auto
+}
+
+#window-schoology .s-rte p,
+#window-schoology .s-rte pre,
+#window-schoology .s-rte table {
+  margin: 1em 0
+}
+
+#window-schoology .s-rte table {
+  width: auto
+}
+
+#window-schoology .s-rte>p:first-child,
+#window-schoology .s-rte>pre:first-child,
+#window-schoology .s-rte>table:first-child {
+  margin-top: 0
+}
+
+#window-schoology .s-rte>p:last-child,
+#window-schoology .s-rte>pre:last-child,
+#window-schoology .s-rte>table:last-child {
+  margin-bottom: 0
+}
+
+#window-schoology .s-rte a {
+  font-weight: 400
+}
+
+#window-schoology .s-rte input[type=button],
+#window-schoology .s-rte input[type=submit] {
+  background: url(/sites/all/themes/schoology_theme/images/gray-btn-bg.gif?662824fd62806ae6) repeat-x 0 1px #fff;
+  border: 1px solid;
+  border-color: #999 #999 #888;
+  color: #333;
+  font-size: 12px;
+  padding: 3px 6px
+}
+
+#window-schoology .s-rte img {
+  max-width: 100%
+}
+
+#window-schoology .s-rte td img {
+  max-width: 978px
+}
+
+#window-schoology .s-rte {
+  max-width: 100%;
+  line-height: 1.4;
+  overflow-x: auto
+}
+
+#window-schoology .s-rte select {
+  height: auto
+}
+
+#window-schoology .popups-tabs {
+  border-bottom: 1px solid #c7c7c7;
+  background: url(/images/bg-tile.jpg?662824fd62806ae6) #f2f2f2;
+  padding: 8px 0 0;
+  padding-inline-start: 7px;
+  height: 25px
+}
+
+#window-schoology .edit-media-type {
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 3px 10px 3px;
+  padding-inline-start: 20px;
+  color: #327cbb;
+  margin-top: -3px;
+  background: url(/sites/all/themes/schoology_theme/images/icons_sprite_new.png?662824fd62806ae6) no-repeat 0 -145px;
+  opacity: .75;
+  zoom: 1
+}
+
+#window-schoology .edit-media-type.edit-media-type-media {
+  background-position: 0 -597px
+}
+
+#window-schoology [dir=rtl] #edit-media-type-wrapper .edit-media-type {
+  background-position-x: 41px;
+  padding-inline-end: 11px
+}
+
+#window-schoology [dir=rtl] .edit-media-type.edit-media-type-media {
+  padding-inline-end: 10px
+}
+
+#window-schoology .content p {
+  padding: 5px 10px 15px;
+  margin: 0;
+  text-align: center
+}
+
+#window-schoology .assessment-edit-question-form .content p {
+  padding: 0;
+  margin: 1em 0;
+  text-align: start
+}
+
+#window-schoology .assessment-edit-question-form .s-rte p:first-child {
+  margin-top: 0
+}
+
+#window-schoology .mathquill-wrapper {
+  padding-bottom: 35px
+}
+
+#window-schoology .s-hide-all-nav #bottom-bar,
+#window-schoology .s-hide-all-nav #sidebar-left {
+  display: none
+}
+
+#window-schoology .s-hide-all-nav .pds-content {
+  padding: 0
+}
+
+#window-schoology .s-hide-all-nav #body {
+  grid-template-rows: 0
+}
+
+#window-schoology .s-hide-all-nav #wrapper {
+  width: 100%
+}
+
+#window-schoology .s-hide-all-nav #container {
+  width: 100%;
+  margin: 0
+}
+
+#window-schoology .s-hide-all-nav #main-content-wrapper {
+  margin: 0;
+  border: none;
+  padding: 0
+}
+
+#window-schoology .s-hide-all-nav #main-content-wrapper {
+  width: 100%
+}
+
+#window-schoology body.s-hide-all-nav {
+  background: #fff
+}
+
+#window-schoology .s-hide-all-nav #container {
+  padding: 0
+}
+
+#window-schoology .s-hide-all-nav #wrapper {
+  min-width: 0;
+  max-width: none
+}
+
+#window-schoology .bottom-span {
+  display: none
+}
+
+#window-schoology #error-page {
+  border: 1px solid #c7c7c7;
+  background: #fff;
+  padding: 20px;
+  width: 500px;
+  margin: 30px auto 0
+}
+
+#window-schoology #error-page p {
+  padding: 10px 0;
+  line-height: 1.4
+}
+
+#window-schoology #error-page a {
+  font-weight: 400;
+  margin-bottom: 3px;
+  display: inline-block
+}
+
+#window-schoology .error-403.s-hide-left-nav #error-page {
+  background: #fff
+}
+
+#window-schoology .autocomplete-wrapper {
+  border: 1px solid #c7c7c7;
+  padding: 4px 4px 0;
+  cursor: text;
+  overflow: hidden
+}
+
+#window-schoology .autocomplete-wrapper .form-item {
+  display: block;
+  float: left;
+  cursor: text;
+  margin-bottom: 0
+}
+
+#window-schoology [dir=rtl] .autocomplete-wrapper .form-item {
+  float: right
+}
+
+#window-schoology .autocomplete-wrapper .form-item input {
+  border: 0 none;
+  font-family: var(--sgy-font-default);
+  font-size: 12px;
+  padding: 4px 0;
+  margin-bottom: 4px;
+  white-space: pre;
+  width: 60px
+}
+
+#window-schoology .autocomplete-wrapper .form-item input:focus {
+  outline: 0 none
+}
+
+#window-schoology .hide-tabs-wrapper #tabs-wrapper {
+  display: none
+}
+
+#window-schoology body .select2-container {
+  width: auto !important
+}
+
+#window-schoology body .select2-container .select2-choice {
+  background: 0 0;
+  border: none;
+  padding: 0;
+  color: #327cbb;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0
+}
+
+#window-schoology body .select2-container .select2-choice {
+  height: 32px;
+  line-height: 32px
+}
+
+#window-schoology .select2-container .select2-choice div {
+  background: url(/sites/all/themes/schoology_theme/images/arrow-down.png?662824fd62806ae6) no-repeat 50% 50%;
+  border: none
+}
+
+#window-schoology [dir=rtl] .select2-container .select2-choice div {
+  border: none
+}
+
+#window-schoology body .select2-container .select2-choice b {
+  display: none
+}
+
+#window-schoology .select2-container .select2-choice span div {
+  position: static;
+  background: 0 0;
+  border: none;
+  height: auto;
+  width: auto;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0
+}
+
+#window-schoology .select2-container .select2-choice span span {
+  display: inline;
+  margin: 0
+}
+
+#window-schoology body .select2-container .select2-choice span b {
+  display: inline;
+  width: auto;
+  height: auto;
+  background: 0 0
+}
+
+#window-schoology .s-rte * {
+  word-wrap: normal;
+  word-break: normal
+}
+
+#window-schoology .keep-content-in-div {
+  position: relative;
+  overflow: hidden
+}
+
+#window-schoology [dir=rtl] .select2-container .select2-choice {
+  padding: 0 !important
+}
+
+#window-schoology #edit-title-wrapper label {
+  display: block
+}
+
+#window-schoology .component-action-edit {
+  margin-inline-end: 10px
+}
+
+#window-schoology #s-assessment-question-edit-form #edit-points-wrapper {
+  border: 1px solid #eaeaea;
+  border-width: 1px 0 1px 0;
+  padding: 18px 20px 20px;
+  margin-top: 18px
+}
+
+#window-schoology .components td {
+  border-bottom: 1px solid #ddd
+}
+
+#window-schoology .component-action-to-bottom {
+  background: url(/sites/all/themes/schoology_theme/images/right-nav-icons.png?662824fd62806ae6) 2px -286px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  margin-bottom: 5px
+}
+
+#window-schoology .component-action-to-bottom:hover {
+  background-position: 2px -305px;
+  text-decoration: none
+}
+
+#window-schoology .component-number {
+  width: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: end;
+  vertical-align: top;
+  padding-inline-end: 10px;
+  text-align: center;
+  white-space: nowrap
+}
+
+#window-schoology .component-title {
+  font-size: 12px;
+  margin: 0 5px 10px;
+  padding-top: 2px
+}
+
+#window-schoology .component-add-link {
+  background: url(/sites/all/themes/schoology_theme/images/right-nav-icons.png?662824fd62806ae6) no-repeat 8px -210px;
+  padding: 5px 5px 5px;
+  padding-inline-start: 30px;
+  font-weight: 400;
+  display: block;
+  color: #333
+}
+
+#window-schoology .component-add-link:hover {
+  background-color: #333;
+  color: #89d4fa;
+  text-decoration: none
+}
+
+#window-schoology #edit-points-wrapper {
+  padding-inline-start: 20px
+}
+
+#window-schoology #edit-review-wrapper {
+  width: 100%
+}
+
+#window-schoology #assessment-fill-status {
+  font-weight: 700;
+  text-align: end;
+  margin: 10px 0 2px;
+  font-size: 12px;
+  position: absolute;
+  inset-inline-end: 11px;
+  top: 0
+}
+
+#window-schoology #assessment-progress-bar {
+  border: 1px solid #9dd684;
+  height: 7px;
+  width: 225px;
+  float: right;
+  position: absolute;
+  inset-inline-end: 11px;
+  top: 30px
+}
+
+#window-schoology [dir=rtl] #assessment-progress-bar {
+  float: left
+}
+
+#window-schoology #assessment-progress-bar div {
+  background-color: #e3ffd8;
+  border-inline-end: 1px solid #9dd684;
+  height: 7px
+}
+
+#window-schoology #s-assessment-question-edit-form {
+  padding: 10px;
+  width: 800px;
+  margin: 0 auto
+}
+
+#window-schoology #s-assessment-question-edit-form .form-item {
+  margin-bottom: 10px
+}
+
+#window-schoology #s-assessment-question-edit-form #edit-title {
+  margin: 0 -6px;
+  width: 100%
+}
+
+#window-schoology #s-assessment-question-edit-form label {
+  padding-bottom: 3px
+}
+
+#window-schoology #s-assessment-question-edit-form #edit-title-wrapper {
+  padding: 0 6px
+}
+
+#window-schoology #s-assessment-question-edit-form #edit-title {
+  min-height: 201px;
+  border-color: #c7c7c7;
+  visibility: hidden
+}
+
+#window-schoology .add-choices {
+  padding: 5px 0 20px;
+  padding-inline-start: 35px;
+  position: relative;
+  font-weight: 700;
+  margin: 0 0 15px;
+  border-bottom: 1px solid #ddd
+}
+
+#window-schoology .add-choices .submit-span-wrapper {
+  margin-inline-end: 4px
+}
+
+#window-schoology .add-choices .form-submit {
+  padding: 3px 8px
+}
+
+#window-schoology #edit-points-wrapper .description {
+  display: inline-block;
+  padding-inline-start: 5px;
+  width: 76%;
+  vertical-align: middle
+}
+
+#window-schoology #edit-points-wrapper label {
+  margin-inline-end: 5px
+}
+
+#window-schoology .component-import {
+  float: right;
+  margin: 7px 0 0;
+  margin-inline-start: 4px;
+  position: relative
+}
+
+#window-schoology [dir=rtl] .component-import {
+  float: left
+}
+
+#window-schoology #s-assessment-question-fill-form {
+  line-height: 1.5em;
+  padding: 11px
+}
+
+#window-schoology .s-hide-left-nav #s-assessment-question-fill-form {
+  position: relative;
+  width: 800px;
+  margin: 0 auto
+}
+
+#window-schoology #assessment-status {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  color: #677583
+}
+
+#window-schoology .question-wrapper {
+  padding: 30px 0;
+  border-bottom: 1px solid #eaeaea
+}
+
+#window-schoology .question-wrapper b,
+#window-schoology .question-wrapper div,
+#window-schoology .question-wrapper em,
+#window-schoology .question-wrapper p,
+#window-schoology .question-wrapper span {
+  white-space: normal !important
+}
+
+#window-schoology .question-question {
+  margin-bottom: 10px;
+  overflow: hidden
+}
+
+#window-schoology .question-number {
+  font-weight: 700;
+  font-size: 14px
+}
+
+#window-schoology .question-points {
+  color: #677583;
+  font-size: 12px
+}
+
+#window-schoology .question-title {
+  margin-top: 10px
+}
+
+#window-schoology .form-checkboxes-table .form-checkbox-option,
+#window-schoology .form-radios-table .form-radio-option {
+  padding-inline-end: 10px;
+  width: 40px;
+  overflow: visible
+}
+
+#window-schoology .form-checkboxes-table td,
+#window-schoology .form-radios-table td {
+  vertical-align: top;
+  word-wrap: normal;
+  overflow: hidden
+}
+
+#window-schoology .form-checkboxes-table p:first-child,
+#window-schoology .form-radios-table p:first-child {
+  margin-top: 0
+}
+
+#window-schoology .multiple-choices,
+#window-schoology .radios-wrapper {
+  margin-inline-start: 15px
+}
+
+#window-schoology .multiple-choices .form-radios {
+  margin: 0
+}
+
+#window-schoology .multiple-choices input {
+  margin-inline-end: 5px
+}
+
+#window-schoology #s-assessment-question-fill-form,
+#window-schoology td.form-checkbox-answer,
+#window-schoology td.form-radio-answer {
+  font-size: 12px !important;
+}
+
+#window-schoology #s-assessment-question-fill-form .submit-span-wrapper {
+  margin-inline-end: 5px
+}
+
+#window-schoology .review-page {
+  border-top: 1px solid #c7c7c7;
+  margin-top: -1px
+}
+
+#window-schoology .review-page td {
+  padding: 3px 0
+}
+
+#window-schoology #s-assessment-question-fill-form .review-page .submit-span-wrapper {
+  float: right;
+  margin-top: 10px;
+  background: url(/sites/all/themes/schoology_theme/images/gray-btn-bg.gif?662824fd62806ae6) repeat-x 0 1px;
+  border-color: #999 #999 #888
+}
+
+#window-schoology [dir=rtl] #s-assessment-question-fill-form .review-page .submit-span-wrapper {
+  float: left
+}
+
+#window-schoology #s-assessment-question-fill-form .review-page .submit-span-wrapper input {
+  color: #444;
+  font-size: 12px
+}
+
+#window-schoology #s-assessment-question-fill-form .review-page .submit-span-wrapper:active {
+  background: #eee
+}
+
+#window-schoology .question-review {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eaeaea
+}
+
+#window-schoology .question-review img {
+  max-width: 100%
+}
+
+#window-schoology .multiple-choice-review span.option-span {
+  padding: 3px 5px 3px;
+  padding-inline-start: 25px;
+  display: inline-block
+}
+
+#window-schoology .multiple-choice-review span.question-content {
+  background: 0 0;
+  padding-inline-start: 0
+}
+
+#window-schoology .question-review .component-title {
+  margin: 0 0 10px;
+  padding-top: 5px
+}
+
+#window-schoology .question-fitb .question-title {
+  display: none
+}
+
+#window-schoology .question-fitb .answer {
+  margin-top: 5px
+}
+
+#window-schoology .question-multiple_choice .option-span {
+  margin-inline-end: 5px
+}
+
+#window-schoology #s-assessment-question-fill-form .question-review {
+  padding: 30px 0
+}
+
+#window-schoology #s-assessment-question-fill-form .submit-span-wrapper {
+  margin-top: 10px
+}
+
+#window-schoology #s-assessment-question-fill-form .hidden {
+  display: none
+}
+
+#window-schoology .choice {
+  font-weight: 700
+}
+
+#window-schoology span.option-span p:first-child {
+  display: inline
+}
+
+#window-schoology .question-wrapper table {
+  border-collapse: separate
+}
+
+#window-schoology .question-wrapper p {
+  margin: 1em 0
+}
+
+#window-schoology .question-wrapper a {
+  font-weight: 400
+}
+
+#window-schoology #s-assessment-question-fill-form img {
+  max-width: 730px
+}
+
+#window-schoology #s-assessment-question-edit-form #edit-title-wrapper {
+  margin: 0 0 10px
+}
+
+#window-schoology #s-assessment-question-import-form {
+  padding: 20px
+}
+
+#window-schoology #s-assessment-question-import-form .form-radios {
+  margin-top: 5px
+}
+
+#window-schoology #edit-select-all-components-wrapper .form-checkbox-title {
+  margin-inline-start: 5px
+}
+
+#window-schoology .multiple-choices table {
+  border-top: 0 none
+}
+
+#window-schoology .multiple-choices tbody tr:last-child td {
+  border-bottom: 0 none
+}
+
+#window-schoology .multiple-choices .form-radio-option {
+  width: 4em
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans-all-400-normal.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans-all-300-normal.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans-all-600-normal.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans-all-600-italic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/open-sans-all-400-italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Karla;
+  src: url(../fonts/karla-latin-700.woff2) format("woff2"), url(../fonts/karla-latin-700.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+:root {
+  --sgy-font-default: 'Sgy Open Sans', 'Open Sans', Helvetica, Arial, sans-serif;
+  --sgy-font-light: 'Sgy Muli', 'Muli', sans-serif;
+  --sgy-font-bold: 'Sgy Muli Bold', 'Muli Bold', sans-serif;
+  --sgy-font-mono-space: 'Courier New', Courier, monospace;
+  --sgy-font-cursive: cursive;
+  --sgy-background-color-default: #faf9f7
+}
+
+@font-face {
+  font-family: "Sgy Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/open-sans-latin-regular.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "Sgy Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(assets/open-sans-latin-italic.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "Sgy Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(assets/open-sans-latin-600.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "Sgy Muli";
+  font-style: normal;
+  font-weight: 200;
+  src: url(assets/muli-latin-200.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: "Sgy Muli";
+  font-style: normal;
+  font-weight: 700;
+  src: url(assets/muli-latin-700.woff2) format("woff2")
+}
+
+#window-schoology #wrapper {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 980px;
+  max-width: 1240px;
+  clear: both
+}
+
+#window-schoology #body {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  overflow-y: scroll;
+  color-scheme: light;
+}
+
+#window-schoology #main-content-wrapper {
+  margin-inline-start: 0;
+}
+
+#window-schoology .question-title {
+  margin-bottom: 10px;
+}
+
+#window-schoology label {
+  font-weight: normal;
+}
+
+#window-schoology .question-points {
+  margin-left: 5px;
+}
+
+#window-schoology img.notschoology {
+  display: block;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#window-schoology .site-navigation-resize {
+  min-height: auto;
+}
+
+#window-schoology span.form-alpha-suffix {
+  position: absolute;
+  left: 32px;
+}
+
+#window-schoology input.c-question-input-clicker {
+  margin-right: 48px;
+}
+
+#window-schoology label.c-question-label {
+  min-height: 22px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#window-schoology label.c-question-label.correct {
+  background: #00ff0045;
+  border: solid 3px #00c400;
+}
+
+#window-schoology label.c-question-label.incorrect {
+  background: #ff00004d;
+  border: solid 3px #c40000;
+}
+
+#window-schoology label.c-question-label.ghost-correct {
+  border: solid 3px #00c400;
+}
+
+#window-schoology input.c-question-input {
+  display: block;
+}
+
+#window-schoology #s-assessment-question-fill-form img {
+  height: 11rem;
+}
+
+#window-schoology span.score {
+  display: block;
+  margin-top: 20px;
+}
+
