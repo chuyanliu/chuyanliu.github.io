@@ -29,9 +29,14 @@
 
   <script>
     let response = document.querySelector('#response');
-    setInterval(function () {
+    let i = 0;
+    let v = setInterval(function () {
+      i++
       response.innerHTML += 'hello ';
-    }, 100);
+      if (i > 69) {
+        clearInterval(v);
+      }
+    }, 50);
   </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
