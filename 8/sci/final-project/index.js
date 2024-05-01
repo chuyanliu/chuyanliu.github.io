@@ -1,5 +1,17 @@
 // main code
 
+window.needToPreloadAssets = [
+  'bg/1.jpg',
+  'bg/2.jpg',
+  'bg/2-1.jpg',
+  'bg/2-2.jpg',
+  'bg/3.jpg',
+  'bg/3-1.jpg',
+  'bg/3-2.jpg',
+  'bg/4-1.jpg',
+  'bg/4-2.jpg',
+];
+
 /*
   assets:
     CHARACTER:
