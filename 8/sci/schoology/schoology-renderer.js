@@ -88,35 +88,6 @@ class SchoologyTest {
     return html;
   }
 }
-
-const test = new SchoologyTest(
-  new MultiChoice(
-    "Choose the correct answer\nThis is a multiline prompt",
-    "questionContent1.png",
-    [
-      { text: 'answer 1', correct: false },
-      { text: 'answer 2', correct: true }
-    ]
-  ),
-  new CheckBoxChoice(
-    "Select one",
-    null,
-    [
-      { text: 'check 1', correct: true },
-      { text: 'check 2', correct: true }
-    ]
-  ),
-  new FillInTheBlank(
-    "Fill in the blank\nAnother line\nAnd another one",
-    null,
-    [
-      { text: 'answer', correct: ['answer', 'notanswer'] }
-    ]
-  )
-);
-
-const testHTML = test.generateHTML();
-console.log(testHTML);
 */
 
 class Question {
