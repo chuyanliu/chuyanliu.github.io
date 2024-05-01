@@ -1,0 +1,496 @@
+/* Remember to use Autoprefixer after finishing css code https://autoprefixer.github.io/ */
+
+@import "../../../global.css";
+
+html {
+  font-size: 1.75vw;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+canvas {
+  display: block;
+}
+
+iframe.fake-shutdown-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+div#main-content {
+  position: absolute;
+  display: block;
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+img#main-background {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+}
+
+div#main-header,
+div.game-header {
+  position: absolute;
+  width: 100%;
+  min-height: 5rem;
+  background: #000000cf;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  /* touch-action: none;
+  pointer-events: none; */
+}
+
+div#main-header-text {
+  width: 100%;
+  font-size: 1rem;
+  /* font-size: 2vw; */
+}
+
+div#main-header-clickarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div#choices-menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  background: #00000080;
+  text-shadow: 0 0 20px #00000040;
+}
+
+div.choices-menu-title {
+  font-size: min(2rem, 24px);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+div.choices-menu-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: 30%;
+}
+
+button.choices-menu-button {
+  margin-bottom: 0.75rem;
+  border: none;
+  outline: none;
+  font-size: min(1.25rem, 18px);
+  padding: min(0.85rem, 18px) min(2rem, 32px);
+  border-radius: 100px;
+  background: #4242427a;
+  border: solid 1px #838383;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+div#overlay-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  pointer-events: none;
+}
+
+div#character-parent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  align-items: flex-end;
+  justify-content: flex-start;
+  touch-action: none;
+  pointer-events: none;
+  padding: 2rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+div.character-display {
+  width: 11.5rem;
+  user-select: none;
+  -webkit-user-select: none;
+  /*width: 20vw;*/
+  /* max-width: 35vh; */
+}
+
+img.character-display-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+div#transition {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+
+div.game-container {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+}
+
+div.game-header-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+div#game-fixearth-background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  background-image: url(game/fixearth/bg.jpg);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+div.game-container#game-fixearth img {
+  max-height: 100%;
+  touch-action: none;
+  pointer-events: none;
+}
+
+div.game-body {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 5rem);
+  padding: 2rem;
+}
+
+input#game-fixearth-rotation,
+input#game-rotatemoon-rotation,
+input#game-maketide-rotation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0.65rem;
+  background: #0000008f;
+  touch-action: none;
+
+}
+
+input#game-fixearth-rotation::-webkit-slider-thumb,
+input#game-rotatemoon-rotation::-webkit-slider-thumb,
+input#game-maketide-rotation::-webkit-slider-thumb,
+{
+background: #808080;
+}
+
+input#game-fixearth-rotation::-moz-range-thumb,
+input#game-rotatemoon-rotation::-moz-range-thumb,
+input#game-maketide-rotation::-moz-range-thumb {
+  background: #808080;
+}
+
+input#game-fixearth-rotation::-ms-thumb,
+input#game-rotatemoon-rotation::-ms-thumb,
+input#game-maketide-rotation::-ms-thumb {
+  background: #808080;
+}
+
+div#game-fixearth-rotation-txt {
+  position: absolute;
+  left: auto;
+  top: auto;
+  font-size: 2rem;
+  text-shadow: 0 0 12px black;
+}
+
+div.modal-dialog {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+div#main-menustart {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0 0 0.75rem #b97aff;
+}
+
+div#main-menustart button.btn.btn-primary {
+  box-shadow: 0 0 20px 0px var(--bs-primary);
+}
+
+div#main-menustart-background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  background-image: url(game/fixearth/bg.jpg);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+div#main-menustart-header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+div#main-menustart-header-text-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+div#main-menustart-header-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+div#main-menustart-header-prenote {
+  max-width: 30rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+div#loader-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+div#loader-screen-txt {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+div#game-rotatemoon-rotation-parent,
+div#game-maketide-rotation-parent {
+  display: block;
+  transform: rotate(0deg);
+  touch-action: none;
+  pointer-events: none;
+}
+
+img#game-rotatemoon-rotation-img,
+img#game-rotatemoon-rotation-img2,
+img#game-maketide-rotation-img,
+img#game-maketide-rotation-img2 {
+  position: absolute;
+  top: -2.5rem;
+  left: -2.5rem;
+  width: 5rem;
+  touch-action: none;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blur-pulse {
+  0% {
+    filter: blur(2.5rem);
+    -webkit-filter: blur(2.5rem);
+  }
+
+  50% {
+    filter: blur(1.25rem);
+    -webkit-filter: blur(1.25rem);
+  }
+
+  100% {
+    filter: blur(2.5rem);
+    -webkit-filter: blur(2.5rem);
+  }
+}
+
+img#game-rotatemoon-rotation-img3,
+img#game-maketide-rotation-img3 {
+  position: absolute;
+  right: 3.25rem;
+  top: auto;
+  width: 8rem;
+  animation: spin 5s linear infinite;
+  touch-action: none;
+  pointer-events: none;
+}
+
+img#game-rotatemoon-rotation-img3.blur,
+img#game-maketide-rotation-img3.blur {
+  filter: blur(2.5rem);
+  -webkit-filter: blur(2.5rem);
+  animation: blur-pulse 2.5s linear infinite;
+}
+
+div#game-rotatemoon-rotation-path,
+div#game-maketide-rotation-path {
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 18.25rem;
+  height: 18.25rem;
+  border: solid 1px;
+  border-radius: 50%;
+  touch-action: none;
+  pointer-events: none;
+}
+
+div#game-maketide-tidecircle {
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: #009bff54;
+}
+
+div#window-schoology {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgb(255, 255, 255);
+  animation-fill-mode: forwards;
+  top: 0;
+  left: 0;
+}
+
+div#credits-scroller {
+  position: absolute;
+  top: 32rem;
+  right: 1.5rem;
+  width: 17rem;
+  white-space: pre-wrap;
+  transform: translateY(0%);
+  text-align: right;
+  color: #000000;
+}
+
+span.credit-title {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+span.credit-elements {}
+
+span.credit-spacer {}
