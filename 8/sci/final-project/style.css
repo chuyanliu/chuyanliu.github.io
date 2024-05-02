@@ -239,6 +239,7 @@ div.game-body {
   align-items: center;
   height: calc(100% - 5rem);
   padding: 2rem;
+  padding-bottom: 5.75rem;
 }
 
 input#game-fixearth-rotation,
@@ -250,7 +251,7 @@ input#game-maketide-rotation {
   padding: 1rem 0.65rem;
   background: #0000008f;
   touch-action: none;
-
+  height: 4rem;
 }
 
 input#game-fixearth-rotation::-webkit-slider-thumb,
